@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Aeonik;
+  src: url(./assets/fonnts.com-Aeonik-Regular.ttf);
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: Aeonik;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  /* background-color: #1e1e1e; */
+}
+
+.navbar {
+  width: 100vw;
+  padding: 25px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  font-weight: 600;
+}
+
+.lists {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.lists li {
+  list-style: none;
+  text-decoration: none;
+}
+
+.lists li a {
+  text-decoration: none;
+  padding: 8px 10px;
+  color: black;
+  font-size: 20px;
+  transition: 0.3s all ease;
+}
+
+.lists li a:hover {
+  border-radius: 20px;
+  border: 1px solid #1e1e1e;
+  padding: 5px 10px;
+}
+
+.book-now {
+  padding: 10px 20px;
+  background-color: #0D1A2D;
+  border-radius: 20px;
+  color: white;
+  font-size: 18px;
+  font-family: 500;
+  cursor: pointer;
+}
+
+.section1 {
+  padding: 10px 35px;
+  height: 85%;
+  width: 100%;
+}
+
+.section1 .all-content {
+  width: 100%;
+  height: 100%;
+  background: url('https://images.pexels.com/photos/163452/basketball-dunk-blue-game-163452.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center{
+height: 55%;
+width: 50%;
+text-align: center;
+color: #fff;
+}
+
+.center h1{
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.center p{
+  margin-top: 10px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 400
+}
+.center button{
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #0D1A2D;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+}
