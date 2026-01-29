@@ -1,29 +1,47 @@
 import React, { useState } from 'react'
-import Washroom from './componenets/Washroom'
-
+import Input from './componenets/Input'
+import TextChange from './componenets/TextChange'
+import ChangeName from './componenets/ChangeName'
+import Likes from './componenets/Likes'
+import Disable from './componenets/Disable'
+import CharacterCounter from './componenets/CharacterCounter'
 
 const App = () => {
 
-  const [gender, setgender] = useState("Male")
-
-  function changeGender() {
-    if(gender == "Male"){
-      setgender("Female")
-    }else if(gender == "Female"){
-      setgender("Others")
-    }else{
-      setgender("Male")
+  const [count, setcount] = useState(0)
+  const addCount = () => {
+    // console.log('hello')
+    setcount(count + 1)
+  }
+  const minusCount = () => {
+    if (count <= 0) {
+      return
+    }
+    else {
+      setcount(count - 1)
     }
   }
 
+  const jumpByFive = () => {
+    setcount(count + 5)
+  }
+
   return (
-    <div className='main'>
-     <div className={`gender ${gender}`}>
-       <h1>My Gender is ~ {gender} </h1>
-     </div>
-      <button onClick={changeGender}>Change Gender</button>
-      <Washroom user = {gender} />
+    <div className='app-main'>
+      <h1>Number: {count} </h1>
+      <button onClick={addCount}>Count +</button>
+      <button onClick={minusCount}>Count -</button>
+      <button onClick={jumpByFive}>jump +5</button>
+
+      <Input />
+      <TextChange />
+      <ChangeName />
+      {/* <Likes />
+      <Disable /> */}
+      <CharacterCounter />
+
     </div>
+
   )
 }
 
